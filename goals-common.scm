@@ -55,7 +55,7 @@
         (string->date db-date "~m/~d/~Y"))))
 
 (define (days-since d1 d2)
-  (inexact->exact (floor (/ (+ (time->seconds (date-difference d2 d1)) 0.0) 86400))))
+  (inexact->exact (floor (/ (+ (time->seconds (date-difference d1 d2)) 0.0) 86400))))
 
 (define (goal-date g)
   (cadr (with-input-from-file (++ "db/" g)
