@@ -1,5 +1,8 @@
+#!/usr/bin/csi -script
+
 (use send-grid)
 
+(change-directory "/goals")
 (load "goals-common.scm")
 (api-user (insert-file "send-grid-user"))
 (api-key (insert-file "send-grid-key"))
